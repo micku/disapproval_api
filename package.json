@@ -2,10 +2,11 @@
   "name": "disapproval_api",
   "version": "1.0.0",
   "description": "Provides an API for disapproval usage",
-  "main": "index.js",
+  "main": "disapproval_api",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "build": "node build.js"
   },
   "author": "Michele Gargiulo / Stefano Giometti",
   "license": "ISC",
