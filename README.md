@@ -28,4 +28,4 @@ This:
 * deploys to GitHub Pages
 
 ## Credits
-All the content is from [Leigh McCulloch](https://github.com/leighmcculloch), it's looks.wtf repo is linked via submodule and only re-formatted.
+All the content is from [Leigh McCulloch](https://github.com/leighmcculloch), it's looks.wtf repo is linked via submodule and just re-formatted.
