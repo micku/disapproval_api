@@ -6,7 +6,14 @@ Actually this is published as a [GitHub Pages](https://pages.github.com/) at [di
 (☞ﾟ∀ﾟ)☞
 
 ## Usage
-Just fork the repo, configure your GitHub Pages to [publish from gh-pages branch](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages) and run:
+Just go to [http://disapi.grg.io/categories.json](http://disapi.grg.io/categories.json) and use whatever you want!
+
+## Customizing
+I will be happy to accept pull requests.
+
+or...  
+
+Fork&clone the repo, configure your GitHub Pages to [publish from gh-pages branch](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages) and run:
 
 ```
 npm install
