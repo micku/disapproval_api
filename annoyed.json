@@ -1,12 +1,1 @@
-[ { title: 'For real?',
-    face: '눈_눈',
-    tags: [ 'all', 'annoyed', 'the-look' ] },
-  { title: null,
-    face: '☜(ಠ_ಠ☜)',
-    tags: [ 'all', 'annoyed', 'confused', 'finger-look', 'love' ] },
-  { title: 'Yawning Look',
-    face: '(´Д｀)',
-    tags: [ 'all', 'annoyed' ] },
-  { title: null,
-    face: '＼(〇O〇)／',
-    tags: [ 'all', 'angry', 'annoyed', 'stoned' ] } ]
+[{"title":"For real?","face":"눈_눈","tags":["all","annoyed","the-look"]},{"title":null,"face":"☜(ಠ_ಠ☜)","tags":["all","annoyed","confused","finger-look","love"]},{"title":"Yawning Look","face":"(´Д｀)","tags":["all","annoyed"]},{"title":null,"face":"＼(〇O〇)／","tags":["all","angry","annoyed"]}]
