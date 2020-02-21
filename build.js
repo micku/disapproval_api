@@ -1,6 +1,5 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
-const util = require('util');
 
 const BASE_DIR = 'build';
 
@@ -42,15 +41,20 @@ var rmDir = function(dirPath) {
 };
 
 try {
+    if (!fs.existsSync(BASE_DIR)){
+        fs.mkdirSync(BASE_DIR);
+    }
+
     erase();
 
-    const sourceCategories = yaml.safeLoad(fs.readFileSync('looks.wtf/data/tags.yml', 'utf8'));
-    fs.writeFileSync(`${BASE_DIR}/categories.json`, util.inspect(Array.from(
+    const sourceCategories = yaml.safeLoad(fs.readFileSync('looks.wtf/tags.yml', 'utf8'));
+    sourceCategories.push('all')
+    fs.writeFileSync(`${BASE_DIR}/categories.json`, JSON.stringify(Array.from(
                     sourceCategories,
                     x => { return { 'name': x, 'file': `${x}.json` } }
                     )), 'utf8');
 
-    const sourceLooks = yaml.safeLoad(fs.readFileSync('looks.wtf/data/looks.yml', 'utf8'));
+    const sourceLooks = yaml.safeLoad(fs.readFileSync('looks.wtf/looks.yml', 'utf8'));
     
     let looks = [];
     sourceLooks.forEach(item => {
@@ -63,8 +67,12 @@ try {
 
     sourceCategories.forEach(cat => {
         let faces = looks.filter(e => e.tags.indexOf(cat) > -1);
-        fs.writeFileSync(`${BASE_DIR}/${cat}.json`, util.inspect(faces), 'utf8');
+        fs.writeFileSync(`${BASE_DIR}/${cat}.json`, JSON.stringify(faces), 'utf8');
     });
+
+    fs.writeFileSync(`${BASE_DIR}/all.json`, JSON.stringify(looks), 'utf8');
+
+    fs.copyFileSync('CNAME', `${BASE_DIR}/CNAME`);
 }
 catch (e) {
     console.log(e);
